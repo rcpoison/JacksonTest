@@ -15,7 +15,7 @@ public class Test {
 		ObjectMapper mapper=new ObjectMapper();
 		JaxbAnnotationIntrospector jaxbAnnotationIntrospector=new JaxbAnnotationIntrospector(mapper.getTypeFactory());
 		JacksonAnnotationIntrospector jacksonAnnotationIntrospector=new JacksonAnnotationIntrospector();
-		mapper.setAnnotationIntrospector(AnnotationIntrospector.pair(jaxbAnnotationIntrospector, jacksonAnnotationIntrospector));
+		mapper.setAnnotationIntrospector(AnnotationIntrospector.pair(jacksonAnnotationIntrospector, jaxbAnnotationIntrospector));
 
 		TestEntity testEntity=new TestEntity();
 		testEntity.setUuids(Arrays.asList(UUID.randomUUID(), UUID.randomUUID()));
